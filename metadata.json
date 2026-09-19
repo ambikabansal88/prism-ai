@@ -1,0 +1,6 @@
+{
+  "name": "Gemini Chatbot",
+  "description": "A modern, intelligent AI assistant featuring a real-time search engine with Google Search grounding, multimodal reasoning, document analysis, photorealistic image synthesis, voice interaction, and chat history.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
