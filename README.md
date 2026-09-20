@@ -14,7 +14,6 @@ An AI-powered chatbot built with Google AI Studio and the Gemini API.
 -  google search
 -  image generation
 -  code debug
--  
 
 ## 🛠️ Technologies Used
 
