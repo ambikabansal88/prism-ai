@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🤖 Prism AI
 
-# Run and deploy your AI Studio app
+An AI-powered chatbot built with Google AI Studio and the Gemini API.
 
-This contains everything you need to run your app locally.
+## ✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/fa9a9c6f-636d-4d03-80a5-d95a77b66509
+- 💬 AI-powered conversations
+- 🔎 Real-time web search
+- 🌐 Multilingual support
+- 📝 Chat history
+- 🗑️ Delete conversations
+- 👤 User profile
+- 📱 Responsive interface
+-  google search
+-  image generation
+-  code debug
+-  
 
-## Run Locally
+## 🛠️ Technologies Used
 
-**Prerequisites:**  Node.js
+- Google AI Studio
+- Gemini API
+- HTML
+- CSS
+- JavaScript
 
+## 🚀 Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js
+- Gemini API Key
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
