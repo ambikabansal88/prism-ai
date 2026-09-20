@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Light Aesthetic - Aurora Glass Theme Variables */
+:root {
+  --color-bg-base: #F8FAFD;
+  --color-lavender: #C4B5FD;
+  --color-pink: #FBCFE8;
+  --color-babyblue: #BFDBFE;
+  --color-mint: #A7F3D0;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748B;
+  --color-glass-surface: rgba(255, 255, 255, 0.72);
+  --color-glass-border: rgba(255, 255, 255, 0.85);
+}
+
+/* Smooth Scrolling & Typography Anti-aliasing */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #F8FAFD;
+  color: #1E293B;
+  font-family: var(--font-sans);
+}
+
+/* Prevent horizontal scrolling globally and handle safe mobile layout */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Soft Lavender Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.55);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Aurora Glass Glassmorphism Utilities */
+.glass-aurora {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 35px -5px rgba(147, 112, 219, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.glass-aurora-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 30px -4px rgba(147, 112, 219, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-aurora-card:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(196, 181, 253, 0.6);
+  box-shadow: 0 14px 40px -6px rgba(167, 139, 250, 0.14), 0 0 0 1px rgba(244, 114, 182, 0.25);
+}
+
+.glass-bubble-ai {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 30px -5px rgba(100, 116, 139, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.glass-bubble-user {
+  background: linear-gradient(135deg, #818CF8 0%, #A855F7 50%, #F472B6 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 28px -4px rgba(168, 85, 247, 0.25);
+}
+
+/* Slow, Dreamy Aurora Blob Drift Keyframes */
+@keyframes aurora-blob-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(60px, -40px) scale(1.15);
+  }
+  66% {
+    transform: translate(-45px, 50px) scale(0.9);
+  }
+}
+
+@keyframes aurora-blob-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-50px, 60px) scale(0.92);
+  }
+  66% {
+    transform: translate(70px, -35px) scale(1.18);
+  }
+}
+
+@keyframes aurora-blob-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(45px, 55px) scale(1.12);
+  }
+  66% {
+    transform: translate(-60px, -30px) scale(0.95);
+  }
+}
+
+@keyframes aurora-blob-4 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-55px, -45px) scale(1.08);
+  }
+  66% {
+    transform: translate(40px, 40px) scale(0.94);
+  }
+}
+
+.animate-aurora-blob-1 {
+  animation: aurora-blob-1 28s ease-in-out infinite;
+}
+
+.animate-aurora-blob-2 {
+  animation: aurora-blob-2 34s ease-in-out infinite;
+}
+
+.animate-aurora-blob-3 {
+  animation: aurora-blob-3 30s ease-in-out infinite;
+}
+
+.animate-aurora-blob-4 {
+  animation: aurora-blob-4 32s ease-in-out infinite;
+}
+
+/* Gentle Light Wave Sweep */
+@keyframes aurora-light-wave {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.65;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.45;
+  }
+}
+
+.animate-light-wave {
+  animation: aurora-light-wave 60s linear infinite;
+}
+
+/* Shimmering Soft Pastel Text Gradient */
+@keyframes aurora-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.aurora-text-gradient {
+  background: linear-gradient(135deg, #6366F1 0%, #A855F7 35%, #EC4899 70%, #10B981 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: aurora-shimmer 10s linear infinite;
+}
+
+/* Gentle Pulsing Microphone for Voice Input */
+@keyframes mic-pulse-aurora-anim {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.45), 0 0 0 0 rgba(196, 181, 253, 0.35);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(244, 114, 182, 0), 0 0 0 20px rgba(196, 181, 253, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(244, 114, 182, 0), 0 0 0 0 rgba(196, 181, 253, 0);
+  }
+}
+
+.mic-pulse-aurora {
+  animation: mic-pulse-aurora-anim 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Gentle Breathing Pulse for AI Thinking Indicator */
+@keyframes gentle-pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse-soft 2.4s ease-in-out infinite;
+}
+
+/* Sound wave audio bars animation for voice playback & recording */
+@keyframes sound-bar-1 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+@keyframes sound-bar-2 {
+  0%, 100% { height: 14px; }
+  50% { height: 5px; }
+}
+@keyframes sound-bar-3 {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+
+.sound-wave-1 {
+  animation: sound-bar-1 0.85s ease-in-out infinite;
+}
+.sound-wave-2 {
+  animation: sound-bar-2 0.75s ease-in-out infinite;
+}
+.sound-wave-3 {
+  animation: sound-bar-3 0.95s ease-in-out infinite;
+}
+
+/* Floating particle subtle animation */
+@keyframes float-drift-soft {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(6px);
+  }
+}
+
+.animate-float-drift {
+  animation: float-drift-soft 8s ease-in-out infinite;
+}
+
+/* Markdown content responsiveness & word wrapping */
+.markdown-body {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+.markdown-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-body table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
